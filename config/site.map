@@ -1,2 +1,12 @@
-scp-wiki.map = http://scp-wiki.wikidot.com/
-paradox.map = https://paradoxwikis.com/
+# site.map - maps site names to domains
+# Format: site_name = domain
+
+# Must be in lowercase unless explicitly required
+scp-wiki = https://scp-wiki.wikidot.com
+
+paradox-wiki = https://paradoxwiki.com
+
+custom-site = https://example.com
+
+# Custom User Theme
+custom-theme-site = https://cdn.example-link.sys
