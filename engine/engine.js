@@ -32,3 +32,16 @@ function bootEngine(runtime) {
 
 bootEngine(runtime);
 
+function checkWikidotLogin() {
+  const token = localStorage.getItem('wikidot_token');
+  if (token) {
+    console.log("User logged in with Wikidot token:", token);
+    // Optionally fetch user info from Wikidot API
+    // fetch(`https://www.wikidot.com/api/user?access_token=${token}`)
+  } else {
+    console.log("No user logged in");
+  }
+}
+
+// Call on engine init
+checkWikidotLogin();
