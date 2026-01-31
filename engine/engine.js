@@ -45,3 +45,10 @@ function checkWikidotLogin() {
 
 // Call on engine init
 checkWikidotLogin();
+
+const clientId = "YOUR_WIKIDOT_CLIENT_ID";
+const redirectUri = "http://localhost:5500/callback.html"; // must match registered URL
+
+document.getElementById('login-wikidot').addEventListener('click', () => {
+    window.location.href = `https://www.wikidot.com/oauth/authorize?response_type=token&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}`;
+});
