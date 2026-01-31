@@ -1,0 +1,6 @@
+# site_settings.def
+site_name_config = true
+site_content = true
+set_up_site_plugin_builtin = true
+site_description = "Like SCP-Ru but for a Japanese Branch"
+site_descriptor = PNX-JP
