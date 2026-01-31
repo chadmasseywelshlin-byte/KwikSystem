@@ -9,3 +9,4 @@ function loadPage(pageFile) {
 // Expose globally
 window.loadPage = loadPage;
 
+
