@@ -1,0 +1,3 @@
+# logs.def
+log_opt_perm = sys_error
+opt_perm_locator_file = https://sys_error.log/PC
