@@ -11,10 +11,11 @@
 
   if (token) {
     console.log("Wikidot access token:", token);
+
     // Save token in localStorage
     localStorage.setItem('wikidot_token', token);
 
-    // Redirect back to homepage
+    // Redirect back to homepage (GitHub Pages)
     window.location.href = "index.html";
   } else {
     alert("Login failed!");
@@ -22,3 +23,4 @@
 </script>
 </body>
 </html>
+
