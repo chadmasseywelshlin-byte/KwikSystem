@@ -1,0 +1,3 @@
+# engine.def
+engine = github        # options: wikidot, github, Paradox, custom_sys
+wikidot_syntax_false = true  # only needed if engine is Wikidot
