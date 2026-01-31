@@ -32,23 +32,29 @@ function bootEngine(runtime) {
 
 bootEngine(runtime);
 
+<!-- HTML -->
+<button id="login-wikidot">Login with Wikidot</button>
+
+<script>
+// Optional: check if user is already logged in
 function checkWikidotLogin() {
-  const token = localStorage.getItem('wikidot_token');
-  if (token) {
-    console.log("User logged in with Wikidot token:", token);
-    // Optionally fetch user info from Wikidot API
-    // fetch(`https://www.wikidot.com/api/user?access_token=${token}`)
-  } else {
-    console.log("No user logged in");
-  }
+    // Example: check localStorage for a token
+    const token = localStorage.getItem('wikidotToken');
+    if (token) {
+        console.log("User already logged in:", token);
+        // You could redirect or update UI here
+    }
 }
 
-// Call on engine init
+// Call on page load
 checkWikidotLogin();
 
 const clientId = "YOUR_WIKIDOT_CLIENT_ID";
-const redirectUri = "http://localhost:5500/callback.html"; // must match registered URL
+const redirectUri = "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO/callback.html"; // must match registered URL
 
 document.getElementById('login-wikidot').addEventListener('click', () => {
-    window.location.href = `https://www.wikidot.com/oauth/authorize?response_type=token&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}`;
+    const authUrl = `https://www.wikidot.com/oauth/authorize?response_type=token&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}`;
+    window.location.href = authUrl;
 });
+</script>
+
