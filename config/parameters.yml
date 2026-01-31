@@ -1,3 +1,4 @@
 # parameters.yml
 enable_dark_mode: true
 enable_integrated_view: true
+enable_custom_nav: true
