@@ -1,0 +1,6 @@
+# language.def
+language_translate = 
+{
+  lang_opt_1: japanese.lng
+  lang_opt_2: english.lng
+}
