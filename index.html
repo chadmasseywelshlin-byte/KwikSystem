@@ -39,4 +39,13 @@
     }
   </script>
 </body>
+<button id="login-wikidot">Log in with Wikidot</button>
+<script>
+  const clientId = "YOUR_WIKIDOT_CLIENT_ID"; // register your app with Wikidot if needed
+  const redirectUri = "http://localhost:5500/callback.html"; // where Wikidot will redirect
+
+  document.getElementById('login-wikidot').addEventListener('click', () => {
+    window.location.href = `https://www.wikidot.com/oauth/authorize?response_type=token&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}`;
+  });
+</script>
 </html>
