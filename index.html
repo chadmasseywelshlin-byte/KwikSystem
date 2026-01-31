@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Wiki Site</title>
+
+  <!-- Theme CSS placeholder -->
+  <link id="theme-css" rel="stylesheet" href="themes/custom/theme.css">
+
+  <!-- Optional: default style for layout -->
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; }
+    #topbar, #sidebar, #main { padding: 10px; }
+    #topbar { background: #333; color: white; }
+    #sidebar { background: #eee; float: left; width: 200px; min-height: 100vh; }
+    #main { margin-left: 210px; padding: 20px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div id="topbar"></div>
+  <div id="sidebar"></div>
+
+  <!-- Main content -->
+  <div id="main"></div>
+
+  <!-- Config loader -->
+  <script src="config_loader.js"></script>
+
+  <!-- Engine runtime -->
+  <script src="engine.js"></script>
+
+  <!-- Optional: theme switcher / debug -->
+  <script>
+    // Example: change theme dynamically
+    function setTheme(url) {
+      document.getElementById('theme-css').href = url;
+    }
+  </script>
+</body>
+</html>
